@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from .serializers import BookSerializer
 from rest_framework import generics
 from rest_framework.decorators import api_view
@@ -21,3 +20,4 @@ def root(request, format=None):
     return Response({
         'books': reverse('Book_list', request=request, format=format),
     })
+
